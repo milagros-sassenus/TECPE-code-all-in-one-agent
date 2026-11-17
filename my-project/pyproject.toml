@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68,<84"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "minimal-html-demo"
+version = "0.1.0"
+description = "Minimal local FastAPI HTML demo"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi",
+    "pydantic",
+    "uvicorn",
+]
+
+[project.optional-dependencies]
+dev = [
+    "httpx",
+    "pytest",
+    "ruff",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.setuptools]
+packages = ["app"]
+
+[tool.ruff]
+target-version = "py311"
+exclude = [".specify"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]
+

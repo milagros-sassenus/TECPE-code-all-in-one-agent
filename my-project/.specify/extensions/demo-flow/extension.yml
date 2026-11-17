@@ -1,0 +1,21 @@
+schema_version: "1.0"
+extension:
+  id: demo-flow
+  name: "Demo Verification and Pull Requests"
+  version: "1.0.0"
+  description: "Verify Python features, review dependencies and publish a PR only after successful checks."
+requires:
+  speckit_version: ">=1.4.0"
+provides:
+  commands:
+    - name: speckit.demo-flow.verify
+      file: commands/verify.md
+      description: "Run tests, lint, formatting and dependency review, then publish the verified feature."
+    - name: speckit.demo-flow.publish
+      file: commands/publish.md
+      description: "Reverify and publish only the current feature's selected changes as a GitHub pull request."
+hooks:
+  after_implement:
+    command: speckit.demo-flow.verify
+    optional: false
+    description: "Verify the completed feature and publish a PR only if every required check succeeds."
