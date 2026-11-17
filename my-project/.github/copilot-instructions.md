@@ -16,6 +16,14 @@ The backend API MUST use Python and FastAPI, not Node.js or TypeScript.
 Keep changes limited to the requested feature and use fictional example data.
 Respond to the user in Spanish.
 
+## Simplicity First
+
+Always prefer the simplest solution that fully satisfies the requirements.
+Avoid unnecessary abstractions, dependencies, configuration, and files.
+Reuse existing patterns and tools before introducing new ones. Do not build
+for hypothetical future needs. Simplicity must not compromise correctness,
+security, or required validation.
+
 ## Spec Kit Workflow
 
 - Use the installed `speckit-*` skills when the user requests that workflow.
