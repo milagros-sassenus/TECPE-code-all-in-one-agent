@@ -1,0 +1,20 @@
+installed:
+  - git
+  - demo-flow
+settings:
+  auto_execute_hooks: true
+hooks:
+  before_specify:
+    - extension: git
+      command: speckit.git.feature
+      enabled: true
+      optional: false
+      priority: 10
+      description: "Create and switch to a numbered feature branch before specification."
+  after_implement:
+    - extension: demo-flow
+      command: speckit.demo-flow.verify
+      enabled: true
+      optional: false
+      priority: 10
+      description: "Run verification and dependency review, then publish the feature PR only on success."

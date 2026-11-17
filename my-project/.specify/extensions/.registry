@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0",
+  "extensions": {
+    "git": {
+      "version": "1.0.4",
+      "source": "local",
+      "manifest_hash": "sha256:7a190a397b702e38a1f5d0db01072b944d6b28c990651aef2df28385df06aeee",
+      "enabled": true,
+      "priority": 10,
+      "registered_commands": {},
+      "registered_skills": [
+        "speckit-git-feature",
+        "speckit-git-validate",
+        "speckit-git-remote",
+        "speckit-git-initialize",
+        "speckit-git-commit"
+      ],
+      "installed_at": "2026-11-17T19:11:05.893026+00:00"
+    },
+    "demo-flow": {
+      "version": "1.0.0",
+      "source": "local",
+      "manifest_hash": "sha256:c7270f2d019b1a044640932fd316cff5aaddcfe1ed9bb7e056a3e8699ea7768b",
+      "enabled": true,
+      "priority": 10,
+      "registered_commands": {},
+      "registered_skills": [
+        "speckit-demo-flow-verify",
+        "speckit-demo-flow-publish"
+      ],
+      "installed_at": "2026-11-17T19:13:38.991860+00:00"
+    }
+  }
+}

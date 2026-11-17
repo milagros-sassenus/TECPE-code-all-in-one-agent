@@ -93,6 +93,14 @@ only; never commit secrets, credentials, local databases, or personal data.
 6. Report the commands executed, their results, and remaining blockers. Never
    claim a check passed if it was not run. Use `speckit-converge` when checking
    whether an implementation still has gaps against its approved artifacts.
+7. Honor the mandatory feature-branch hook before specification and the
+   verification hook after implementation. Verification MUST include the
+   acceptance scenarios, tests, lint, formatting, and dependency review.
+   Only after all required checks pass, commit the feature's changes, push its
+   branch, and create or reuse a PR against the repository's default branch.
+   Outdated packages alone are advisory; failed checks or unavailable review
+   tooling MUST block publication. Never include unrelated work or merge
+   automatically.
 
 ## Governance
 
@@ -113,5 +121,7 @@ it does not assert that any application code or tooling already exists.
   stack.
 - 1.1.0: Add dependency freshness reviews at the user's request to make package
   maintenance visible during the demo.
+- 1.2.0: Add mandatory feature branching, verification, and verified-feature PR
+  publication at the user's request.
 
-**Version**: 1.1.0 | **Ratified**: 2026-11-17 | **Last Amended**: 2026-11-17
+**Version**: 1.2.0 | **Ratified**: 2026-11-17 | **Last Amended**: 2026-11-17
